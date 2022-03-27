@@ -8,14 +8,13 @@ import cn.xie.dao.UserDao;
 import cn.xie.domain.User;
 
 @RestController
-public class Login {
+public class UserController {
     @Autowired
     private UserDao userDao;
 
     @PostMapping("/login")
     private boolean login(String username, String passwd) {
         User user = userDao.getByUsername(username);
-        System.out.println(user);
-        return false;
+        return user.getPasswd().equals(passwd);
     }
 }
