@@ -1,5 +1,8 @@
-package cn.xie.domain;
+package cn.xie.entity;
 
+import com.baomidou.mybatisplus.annotation.TableName;
+
+@TableName("users")
 public class User {
     private String username;
     private String passwd;

@@ -1,21 +1,30 @@
 package cn.xie;
 
+import java.util.List;
+
+import javax.annotation.Resource;
+
 import org.junit.jupiter.api.Test;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import cn.xie.dao.UserDao;
+import cn.xie.entity.User;
+import cn.xie.mapper.UserMapper;
 
 @SpringBootTest
 class ApplicationTests {
-
-	@Autowired
-	private UserDao userDao;
+	@Resource
+	private UserMapper userMapper;
 
 	@Test
-	void contextLoads() {
-		System.out.println("TEST");
-		System.out.println(userDao.getByUsername("xie"));
+	void selectAllUser() {
+		List<User> userList = userMapper.selectList(null);
+		userList.forEach(System.out::println);
+	}
+
+	@Test
+	void selectByUsername() {
+		User user = userMapper.selectByUsername("xie");
+		System.out.println(user.getUsername() + " " + user.getPasswd());
 	}
 
 }
