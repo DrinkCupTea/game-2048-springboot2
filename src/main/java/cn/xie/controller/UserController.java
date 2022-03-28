@@ -1,6 +1,6 @@
 package cn.xie.controller;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import javax.annotation.Resource;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -9,7 +9,7 @@ import cn.xie.mapper.UserMapper;
 
 @RestController
 public class UserController {
-    @Autowired
+    @Resource
     private UserMapper userMapper;
 
     @PostMapping("/login")
