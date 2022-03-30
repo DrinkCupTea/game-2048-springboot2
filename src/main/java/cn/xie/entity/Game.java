@@ -6,9 +6,9 @@ public class Game {
     private int tileRow;
     private int tileColumn;
     private int tileValue;
-    private int nextMove;
+    private String nextMove;
 
-    public Game(int id, int tileRow, int tileColumn, int tileValue, int nextMove) {
+    public Game(int id, int tileRow, int tileColumn, int tileValue, String nextMove) {
         this.id = id;
         this.tileRow = tileRow;
         this.tileColumn = tileColumn;
@@ -40,10 +40,10 @@ public class Game {
     public void setTileValue(int tileValue) {
         this.tileValue = tileValue;
     }
-    public int getNextMove() {
+    public String getNextMove() {
         return nextMove;
     }
-    public void setNextMove(int nextMove) {
+    public void setNextMove(String nextMove) {
         this.nextMove = nextMove;
     }
 

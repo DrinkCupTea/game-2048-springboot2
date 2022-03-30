@@ -40,7 +40,7 @@ class ApplicationTests {
 
 	@Test
 	void insertIntoGame() {
-		gameMapper.insert(new Game(1, 1, 1, 2, 1));
+		gameMapper.insert(new Game(1, 1, 1, 2, "ArrowUp"));
 	}
 
 }
