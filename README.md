@@ -2,7 +2,7 @@
 
 ## Description
 
-This is the backend for vue-2048(you can find it in my repositories which is written in vue2).
+This is the backend for vue-2048(you can find it in my repositories which is written in vue3).
 
 It can recive a series of data of 2048 moves, and store them in mysql/game-2048.
 
